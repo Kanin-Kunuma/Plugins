@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.intellij") version "1.17.4"
 }
 
-group = "com.example"
+group = "com.zcom"
 version = "1.0.0"
 
 repositories {
@@ -28,6 +28,6 @@ tasks.named("initializeIntelliJPlugin") {
 tasks {
     patchPluginXml {
         sinceBuild.set("231")
-        untilBuild.set("260.*")
+        untilBuild.set("241.*")
     }
 }

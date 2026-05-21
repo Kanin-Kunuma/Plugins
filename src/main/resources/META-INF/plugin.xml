@@ -1,8 +1,10 @@
 <idea-plugin>
-    <id>com.example.customdoc</id>
-    <name>Custom Doc Plugin</name>
+    <id>com.zcom.customdoc</id>
+    <name>Custom Doc</name>
     <vendor>Z-COM</vendor>
     <description><![CDATA[
+        A lightweight IntelliJ IDEA plugin that provides customized JavaDoc comment templates with @description tag for Java classes, interfaces, enums, and annotations.
+
         <h2>Overview / 概览</h2>
         <p>Custom Doc Plugin is a lightweight IntelliJ IDEA plugin that provides customized JavaDoc comment templates for Java classes.</p>
         <p>自定义文档插件是一个轻量级的 IntelliJ IDEA 插件，为 Java 类提供自定义的 JavaDoc 注释模板。</p>
@@ -41,6 +43,6 @@
     <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <enterHandlerDelegate implementation="com.example.customdoc.CustomDocEnterHandler"/>
+        <enterHandlerDelegate implementation="com.zcom.customdoc.CustomDocEnterHandler"/>
     </extensions>
 </idea-plugin>

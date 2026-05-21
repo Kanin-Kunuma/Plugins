@@ -1,4 +1,4 @@
-package com.example.customdoc;
+package com.zcom.customdoc;
 
 import com.intellij.codeInsight.editorActions.enter.EnterHandlerDelegate;
 import com.intellij.openapi.actionSystem.DataContext;
