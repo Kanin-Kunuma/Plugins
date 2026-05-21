@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.example.customdoc</id>
+    <name>Custom Doc Plugin</name>
+    <vendor>Z-COM</vendor>
+    <description><![CDATA[
+        <h2>Overview / 概览</h2>
+        <p>Custom Doc Plugin is a lightweight IntelliJ IDEA plugin that provides customized JavaDoc comment templates for Java classes.</p>
+        <p>自定义文档插件是一个轻量级的 IntelliJ IDEA 插件，为 Java 类提供自定义的 JavaDoc 注释模板。</p>
+        <p>When you type <code>/**</code> above a class declaration and press Enter, it automatically generates a clean <code>@description</code> tag.</p>
+        <p>当你在类声明上方输入 <code>/**</code> 并按回车时，会自动生成简洁的 <code>@description</code> 标签。</p>
+
+        <h2>Features / 功能特性</h2>
+        <ul>
+            <li>✨ Customized <code>@description</code> tag / 自定义 <code>@description</code> 标签</li>
+            <li>🎯 Smart detection: only triggers on class-level / 智能检测：仅在类级别触发</li>
+            <li>📝 Supports classes, interfaces, enums, annotations / 支持类、接口、枚举、注解</li>
+            <li>⚡ Automatic cursor positioning / 自动光标定位</li>
+            <li>🔧 Non-intrusive: methods use default JavaDoc / 不干扰方法的默认 JavaDoc</li>
+        </ul>
+
+        <h2>Usage / 使用方法</h2>
+        <ol>
+            <li>Place cursor above a class / 将光标放在类声明上方</li>
+            <li>Type <code>/**</code> and press <kbd>Enter</kbd> / 输入 <code>/**</code> 并按回车</li>
+            <li>Start typing your description / 开始输入描述内容</li>
+        </ol>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>Version 1.0.0</h3>
+        <ul>
+            <li>Initial release / 初始版本发布</li>
+            <li>Customized @description tag for class documentation / 为类文档提供自定义的 @description 标签</li>
+            <li>Support for classes, interfaces, enums, and annotations / 支持类、接口、枚举和注解</li>
+            <li>Smart detection: only triggers on class-level declarations / 智能检测：仅在类级别声明时触发</li>
+            <li>Automatic cursor positioning for quick input / 自动光标定位以便快速输入</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <enterHandlerDelegate implementation="com.example.customdoc.CustomDocEnterHandler"/>
+    </extensions>
+</idea-plugin>
