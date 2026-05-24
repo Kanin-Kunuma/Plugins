@@ -51,6 +51,12 @@ public class CustomDocEnterHandler implements EnterHandlerDelegate {
             String nextLine = document.getText().substring(nextLineStart, nextLineEnd).trim();
 
             if (!nextLine.isEmpty() && !nextLine.equals("*/") && !nextLine.startsWith("*")) {
+                // 跳过注解行
+                if (nextLine.startsWith("@")) {
+                    nextLineNum++;
+                    continue;
+                }
+
                 // 检查是否是类、接口、枚举或注解声明
                 boolean isClassLike = nextLine.contains("class") ||
                                      nextLine.contains("interface") ||
